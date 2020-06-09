@@ -1,0 +1,34 @@
+{
+  "name": "persona-service",
+  "description": "get tag",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "DylanChi",
+  "license": "MIT",
+  "engines": {
+    "node": "12.*"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && mkdir ./dist && babel -d ./dist ./src -s --copy-files",
+    "watch": "nodemon --exec babel-node src/index.js",
+    "passport": "babel-node src/bin/passport.js local_test",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@koa/router": "^8.0.8",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-logger": "2",
+    "mongoose": "^5.9.10",
+    "uuidv4": "^6.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "eslint": "^7.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
